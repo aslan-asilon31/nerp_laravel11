@@ -1,0 +1,303 @@
+@extends('../layouts/master_inventory')
+
+@section('content')
+
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Product List <i class="far fa-star"></i> </h1>
+          </div>
+          <div class="col-sm-6 d-none d-sm-block">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Sales</a></li>
+              <li class="breadcrumb-item"><a href="#">Product</a></li>
+              <li class="breadcrumb-item ">Product List</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content pb-3 ">
+      <div class="btn-group btn-group-toggle mt-2 mb-2" data-toggle="buttons" style="outline: 1px solid purple;">
+        <label class="btn btn-purple">
+          <input type="radio" name="options" id="btn-card-table" autocomplete="off" > <i class="fa fa-list"></i>
+        </label>
+        <label class="btn btn-purple active">
+          <input type="radio" name="options" id="btn-card-kanban" autocomplete="off" checked> <i class="fa fa-columns"></i>
+        </label>
+      </div>
+      <div class="bg-white p-2">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex "  >
+              <div class="col-lg-4" >
+                <div class="form-group" style="text-align:center;padding-top: 5px; height: 20px !important;margin-bottom: 10px;" >
+                  <select class="form-control select2" style="width: 100%;padding-top: 5px;height:30px !important;">
+                      @forelse($categories as $category)
+                        <option  value="0" id="">All Categories</option>
+                        <option  value="{{ $category->id}}" id="">{{ $category->name}}</option>
+                      @empty
+                        <option  value="0" id="category-all"> </option>
+                      @endforelse
+                      
+                  </select>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" style="width: 100%;">
+                <div class="form-group" >
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn bg-purple active">
+                      <input type="radio" name="options" id="btn-all-tampil-menu" autocomplete="off" checked> Semua
+                    </label>
+                    <label class="btn bg-purple">
+                      <input type="radio" name="options" id="btn-tampil-menu" autocomplete="off">Tampil di menu
+                    </label>
+                    <label class="btn bg-purple">
+                      <input type="radio" name="options" id="btn-tidak-tampil-menu" autocomplete="off"> Tidak Tampil di menu
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-2" style="width: 100%;">
+                <a href="{{ route('products.create') }}" class="btn btn-purple bg-purple"> <i class="fa fa-plus"></i> New Product</a>
+              </div>
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" id="card-table" style="overflow-x: auto; overflow-y: auto; max-height: 400px;padding-bottom:50px;">
+                <table id="example1" class="table table-bordered table-striped " style="">
+                  <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>SKU</th>
+                    <th>Category</th>
+                    <th>Harga Modal</th>
+                    <th>Harga Beli</th>
+                    <th>Harga Jual</th>
+                    <th>Status</th>
+                    <th>Grup</th>
+                    <th>Monitor persediaan</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                      @forelse($products as $product)
+                        <tr id="tampil-menu">
+                            <td class="text-center">
+                                <img src="{{ Storage::url('public/').$product->image }}" class="rounded" style="width: 150px">
+                            </td>
+                            <td>{{ $product->name }}</td>
+                            <td>SKU-BM5</td>
+                            <td>Beras dan Tepung</td>
+                            <td>Rp 250.000,00-</td>
+                            <td>Rp 220.000,00-</td>
+                            <td>Rp 270.000,00-</td>
+                            <td class="bg bg-success p-1 text-center" > <span >Tampil di menu</span> </td>
+                            <td>-</td>
+                            <td> <span class="bg bg-success p-1">active</span> </td>
+                            <td> 
+                                <a href="javascript:void(0)" class="btn btn-warning btn-sm text-white" title="see detail"><i class="fa fa-edit"></i></a> 
+                                <a href="javascript:void(0)" class="btn bg-purple btn-sm" title="detail inventory"><i class="fa fa-boxes"></i></a> 
+                                <a href="javascript:void(0)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> 
+                            </td>
+                        </tr>
+                        
+                    @empty
+                        </tr>
+                            <td>empty data</td>
+                        </tr>
+                    @endforelse
+
+                  
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>SKU</th>
+                      <th>Category</th>
+                      <th>Harga Modal</th>
+                      <th>Harga Beli</th>
+                      <th>Harga Jual</th>
+                      <th>Status</th>
+                      <th>Grup</th>
+                      <th>Monitor persediaan</th>
+                      <th>Action</th>
+                    </tr>
+                  </tfoot>
+                </table>
+
+                {{ $products->links() }}
+              </div>
+              <div class="card-body" id="card-kanban" style="overflow-x: auto; overflow-y: auto; max-height: 400px;">
+                <div class="row bg-white" style="padding:3px">
+                @forelse($products as $product)
+
+
+                    <div class="col-12 col-sm-6 col-md-6" id="tampil-menu-kanban">
+                      <div class="info-box">
+                       
+                        <span class="info-box-icon elevation-1" style="width:150px;"><img src="{{ Storage::url('public/').$product->image }}" ></span>
+                      
+                        <div class="info-box-content">
+                          <span class="info-box-text">
+                            {{ $product->name}}
+                                <a href="javascript:void(0)" class="btn btn-warning btn-sm text-white" title="see detail"><i class="fa fa-edit"></i></a> 
+                                <a href="javascript:void(0)" class="btn bg-purple btn-sm" title="detail inventory"><i class="fa fa-boxes"></i></a> 
+                                <a href="javascript:void(0)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> 
+
+                            @foreach($orders as $order)
+                              @if ( ($product->id == $order->product_id) && $order->prod_amount >= 100)
+                                <div class="ribbon-wrapper">
+                                  <div class="ribbon bg-danger"> 
+                                    Favorite
+                                  </div>
+                                </div>
+                              @endif                         
+                            @endforeach
+                          </span>
+                          <span class="info-box-number ">
+                          @if ($product->prices->isNotEmpty())
+                              <p class=""></p>Harga Modal : Rp {{ number_format($product->prices->first()->price_average, 0, ',', '.') }},00- <br>
+                              <p class=""></p>Harga beli : Rp {{ number_format($product->prices->first()->price_purchase, 0, ',', '.') }},00- <br>
+                              <p class=""></p>Harga Jual : Rp {{ number_format($product->prices->first()->price_selling, 0, ',', '.') }},00- <br>
+                              <p class=""></p>Harga Jual setelah diskon : Rp {{ number_format($product->prices->first()->price_selling_after, 0, ',', '.') }},00- <br>
+                              <p class=""></p>Persentase harga diskon : Rp {{ number_format($product->prices->first()->price_res_discount, 0, ',', '.') }},00- <br>
+                              <p class=""></p>diskon : {{ $product->prices->first()->discount }} % <br>
+                          @else
+                              Harga tidak tersedia
+                          @endif
+                          </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+
+                  <!-- /.col -->
+                @empty
+                  <div class="col-12 col-sm-6 col-md-6" id="tampil-menu-kanban">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-info elevation-1"><img src="{{ asset('adminlte/') }}dist/img/PRODUT-MASTER/klikindomaret.com/MAKANAN/BAHAN-MASAKAN/MAKANAN-POKOK/BERAS-DAN-TEPUNG/BR-BPAPA.png" style="width:70px;height:60px;"></span>
+    
+                      <div class="info-box-content">
+                        <span class="info-box-text"> -</span>
+                        <span class="info-box-number">
+                          Rp 0,00-
+                        </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                @endforelse
+                {{ $products->links() }}
+                  <!-- fix for small devices only -->
+                  <div class="clearfix hidden-md-up"></div>
+    
+                </div>
+                <!-- /.row -->
+              </div>
+          </div>
+          <!-- /.card -->
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    @push('scripts')
+          
+      <!-- Page specific script -->
+      <script>
+        $(function () {
+          $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+          $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+          });
+        });
+      </script>
+
+      <script>
+        // Example condition, replace this with your actual logic
+        var inventoryModuleActive = true;
+
+        // Find the inventoryActive link element by its ID
+        var inventoryActiveLink = document.getElementById('module-product');
+        var productListActiveLink = document.getElementById('product-list');
+
+        // Check if productListActiveActive is true, then add the active class
+        if (inventoryActiveLink) {
+          inventoryActiveLink.classList.add('active');
+          productListActiveLink.classList.add('active');
+        }
+      </script>
+
+      <script type="text/javascript">
+            $(window).on('load', function() {
+                $('#modal-lg').modal('hidden');
+            });
+      </script>
+
+      <script>
+        $(document).ready(function() {
+
+          $('.select2').select2()
+
+          $("#card-table").hide();
+          $("#card-kanban").show();
+
+          $("#btn-card-table").click(function() {
+              $("#card-kanban").hide();
+              $("#card-table").show();
+          });
+
+          $("#btn-card-kanban").click(function() {
+              $("#card-table").hide();
+              $("#card-kanban").show();
+          });
+
+          // $("#btn-all-tampil-menu").click(function() {
+          //     $("#tidak-tampil-menu").show();
+          //     $("#tidak-tampil-menu-kanban").show();
+          //     $("#tampil-menu").show();
+          //     $("#tampil-menu-kanban").show();
+          // });
+
+          // $("#btn-tampil-menu").click(function() {
+          //     $("#tidak-tampil-menu").hide();
+          //     $("#tidak-tampil-menu-kanban").hide();
+          //     $("#tampil-menu").show();
+          //     $("#tampil-menu-kanban").show();
+          // });
+
+          // $("#btn-tidak-tampil-menu").click(function() {
+          //     $("#tidak-tampil-menu").show();
+          //     $("#tidak-tampil-menu-kanban").show();
+          //     $("#tampil-menu").hide();
+          //     $("#tampil-menu-kanban").hide();
+          // });
+
+
+        });
+      </script>
+    @endpush
+
+@endsection
