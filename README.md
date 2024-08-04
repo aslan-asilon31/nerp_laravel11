@@ -2,20 +2,13 @@
 <hr>
 
 <p width="45%" style="display:inline-block; vertical-align:middle;" >
+  <img src="public/nerp-berkenalan1.png" alt="Gambar 1"  />
+  <img src="public/nerp-berkenalan2.png" alt="Gambar 2" width="45%" style="display:inline-block; vertical-align:middle;" />
+</p>
 
 ![nerp-berkenalan1](https://github.com/user-attachments/assets/26398bbe-2708-4327-be91-b4360109aa65)
 
-</p>
-
-<p width="45%" style="display:inline-block; vertical-align:middle;" >
-
 ![nerp-berkenalan2](https://github.com/user-attachments/assets/ae08eb14-035b-4381-b720-7a1bedf80871)
-
-</p>
-
-
-
-
 
 ![nerp-berkenalan3](https://github.com/user-attachments/assets/52cf7258-42ca-4c0e-9038-a66754431005)
 
