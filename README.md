@@ -99,17 +99,3 @@ mengatur dan mengelola akun-akun akuntansi yang terkait dengan proses produksi d
 <hr>
 
 
-
-![baker-canva-update](https://github.com/user-attachments/assets/9d82dd0c-71d5-4eab-b84c-78484510fbe8)
-
-![Baker Cart Page](https://github.com/user-attachments/assets/dcfd7d86-ce1c-4e45-b84a-eedbb2b5a8f2)
-
-![Baker Invoice Page](https://github.com/user-attachments/assets/fa887359-236b-4e14-a8e2-4914721d411c)
-
-![Baker Landing Page](https://github.com/user-attachments/assets/05419416-f315-42a8-8ee5-c7148f64421a)
-
-![Baker News Page](https://github.com/user-attachments/assets/34db5f59-b9a6-4000-88aa-a121f8466916)
-
-![Baker Search Product Detail Page](https://github.com/user-attachments/assets/905a491e-59e7-46fb-b916-da23602203a4)
-
-![Baker Search Product Page](https://github.com/user-attachments/assets/c1c0a548-9b9f-4f08-9c11-560d9bc516d6)
