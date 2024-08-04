@@ -1,4 +1,26 @@
-## Baker is a bakery shop deskripsi dan screenshots (sorry sengaja assets dan database tidak di push lengkap):
+## NERP ERP adalah aplikasi ERP buatanku 
+<hr>
+
+<p width="45%" style="display:inline-block; vertical-align:middle;" >
+
+![nerp-berkenalan1](https://github.com/user-attachments/assets/26398bbe-2708-4327-be91-b4360109aa65)
+
+</p>
+
+<p width="45%" style="display:inline-block; vertical-align:middle;" >
+
+![nerp-berkenalan2](https://github.com/user-attachments/assets/ae08eb14-035b-4381-b720-7a1bedf80871)
+
+</p>
+
+
+
+
+
+![nerp-berkenalan3](https://github.com/user-attachments/assets/52cf7258-42ca-4c0e-9038-a66754431005)
+
+![nerp-berkenalan4](https://github.com/user-attachments/assets/5903b526-6db0-4e88-bf97-988785afe06c)
+
 
 <hr>
 

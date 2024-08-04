@@ -231,28 +231,36 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar  elevation-4" style="background-color:indigo;color:white !important;font-weight:bolder;">
     <!-- Brand Logo -->
-    <a href="javascript::void(0)" class="brand-link" style="width:40px;height:60px;">
-      <img src="{{ asset('baker_htmlcss/img/logo.png') }}" alt="Nerp Logo" class="brand-image img-circle elevation-3 text-white" style="opacity: .8;width:60px;height:60px;">
-      <span class="brand-text font-weight-bold text-white">Baker</span>
+    <a href="javascript::void(0)" class="brand-link" style="margin-bottom:12px;text-align:center;">
+      <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:70px;height:60px;">
     </a>
+
+    <hr>
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <!-- <div class="user-panel mt-1 pb-1 mb-1 d-flex"> -->
-        <!-- <div class="input-group" data-widget="sidebar-search"> -->
-          <!-- <div class="info"> -->
-              <select id="outletSelect" class="form-control select2 " style="width: 100%;" >
-                @forelse($outlets as $outlet)
-                  <option value="{{ $outlet->id }}" style="padding-top:5px;margin-bottom:5px;"> Outlet {{ $outlet->name }} </option>
-                  @empty
-                  <option value="">-</option>
-                @endforelse
-              </select>
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
 
+      <select id="Select" class="form-control  " style="width: 100%;" >
+        @forelse($companies as $company)
+            <option 
+                value="{{ $company->id }}" 
+                style="padding-top:5px;margin-bottom:5px;"
+                @if($company->name == $company_now->name) selected @endif>
+                Company {{ $company->name }}
+            </option>
+        @empty
+            <option value="">-</option>
+        @endforelse
+      </select>
+
+
+      <select id="" class="form-control  " style="width: 100%;" >
+        @forelse($outlets as $outlet)
+          <option value="{{ $outlet->id }}" style="padding-top:5px;margin-bottom:5px;"> {{$company_now->name}} - Outlet {{ $outlet->name }} </option>
+          @empty
+          <option value="">-</option>
+        @endforelse
+      </select>
 
       <hr class="bg-white">
       <!-- SidebarSearch Form -->

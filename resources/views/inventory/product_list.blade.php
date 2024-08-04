@@ -304,7 +304,7 @@
         // });
 
 
-          $('#outletSelect').change(function () {
+          $('#companySelect').change(function () {
               var productId = $(this).val();
               var companyId = $(this).val();
 

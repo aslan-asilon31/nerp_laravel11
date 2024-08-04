@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('product_variant_id')->nullable();
             $table->string('product_review_id')->nullable();
             $table->integer('status_id')->nullable();
+            $table->integer('brand_id')->nullable();
             $table->integer('price_id')->nullable();
             $table->integer('cat_id')->nullable();
             $table->integer('image_id')->nullable();

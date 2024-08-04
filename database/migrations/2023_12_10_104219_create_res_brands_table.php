@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('res_brands', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
-            $table->integer('product_id')->nullable();
             $table->integer('status_id')->nullable();
             $table->string('image_id')->nullable();
+            $table->string('website_id')->nullable();
             $table->string('name')->nullable();
             $table->integer('workspace_id')->nullable();
             $table->json('desc')->nullable();

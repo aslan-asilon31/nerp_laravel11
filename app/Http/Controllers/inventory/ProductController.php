@@ -11,6 +11,7 @@ use App\Models\Workspace;
 use App\Models\Inventory;
 use App\Models\MasterData\CategoryMaster;
 use App\Models\MasterData\CompanyMaster;
+use App\Models\MasterData\WebsiteMaster;
 use App\Traits\Outlet;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pipeline\Pipeline;
@@ -46,9 +47,11 @@ class ProductController extends Controller
         $categories = CategoryMaster::all();
         $orders = Order::all();
         $outlets = CompanyMaster::all();
+        $companies = WebsiteMaster::all();
+        $workspace = Workspace::find(1); // Mengambil workspace dengan ID 1
+        $company_now = $workspace->website; 
 
-
-        return view('inventory.product_list', compact('products','categories','orders','outlets'));
+        return view('inventory.product_list', compact('products','categories','orders','company_now','outlets','companies'));
     }
 
 

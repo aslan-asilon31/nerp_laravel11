@@ -41,14 +41,19 @@ class ProductController extends Controller
             ->leftJoin('res_prices', 'product_sales.id', '=', 'res_prices.product_id')
             ->leftJoin('orders', 'orders.product_id', '=', 'product_sales.id')
         ->latest()->paginate(10);
-        // dd($workspaces);
 
-        //     ->join('inventories', 'workspace.id', '=', 'inventories.workspace_id')
-        //     ->join('product_sales', 'inventories.product_sales_id', '=', 'product_sales.id')
-        //     // ->where('workspace.res_company_id', 'inventories.workspace_id')
-        // ->get();
-
-        // dd($workspaces);
+        /*
+        companies :
+        1. baker
+        2. lumina
+        3. suktura v2
+        4. nebraska v2
+        5. dermstore
+        6. glowing
+        7. aresto
+        8. volti
+        */
+        
 
 
         return view('inventory.product_list', compact('workspaces','products','categories','outlets','orders'));
