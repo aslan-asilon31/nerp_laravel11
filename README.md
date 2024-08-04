@@ -1,10 +1,8 @@
 ## NERP ERP adalah aplikasi ERP buatanku 
 <hr>
 
-<p width="45%" style="display:inline-block; vertical-align:middle;" >
-  <img src="public/myread/nerp-berkenalan1.png" alt="Gambar 1"  />
+  <img src="public/myread/nerp-berkenalan1.png" alt="Gambar 1"  width="45%" style="display:inline-block; vertical-align:middle;"/>
   <img src="public/myread/nerp-berkenalan2.png" alt="Gambar 2" width="45%" style="display:inline-block; vertical-align:middle;" />
-</p>
 
 ![nerp-berkenalan1](https://github.com/user-attachments/assets/26398bbe-2708-4327-be91-b4360109aa65)
 
