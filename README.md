@@ -8,14 +8,10 @@
 </p>
 
 
-![nerp-berkenalan1](https://github.com/user-attachments/assets/26398bbe-2708-4327-be91-b4360109aa65)
-
-![nerp-berkenalan2](https://github.com/user-attachments/assets/ae08eb14-035b-4381-b720-7a1bedf80871)
-
-![nerp-berkenalan3](https://github.com/user-attachments/assets/52cf7258-42ca-4c0e-9038-a66754431005)
-
-![nerp-berkenalan4](https://github.com/user-attachments/assets/5903b526-6db0-4e88-bf97-988785afe06c)
-
+<p style="display: flex; justify-content: space-between;">
+  <img src="public/myread/nerp-berkenalan3.png" alt="nerp-berkenalan1" width="45%" style="display: inline-block; vertical-align: middle;" />
+  <img src="public/myread/nerp-berkenalan4.png" alt="nerp-berkenalan2" width="45%" style="display: inline-block; vertical-align: middle;" />
+</p>
 
 <hr>
 
