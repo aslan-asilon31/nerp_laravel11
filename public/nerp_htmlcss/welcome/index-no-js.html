@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERP NEW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="welcome-style.css">
+</head>
+<body>
+
+    <div class="container">
+       <!-- aside section start -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2><span>NERP</span></h2>
+                </div>
+                <div class="close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <!-- end top -->
+
+            <div class="sidebar">
+                <select class="js-example-basic-single" name="state">
+                    <option value="AL">Outlet Sudirman</option>
+                    <option value="WY">Outlet Senayan</option>
+                    <option value="WY">Outlet Kuningan</option>
+                    <option value="WY">Outlet Kelapa Gading</option>
+                    <option value="WY">Outlet Pondok Indah</option>
+                </select>
+
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">exit_to_app</span>
+                    <h3>exit</h3>
+                </a>
+            </div>
+
+        </aside>
+       <!-- end aside section start -->
+
+       <!-- main section start-->
+       <main>
+            <div class="top-menu">
+                <ul>
+                    <li><a href="#welcome"> <h3>Welcome</h3> </a></li>
+                    <li class="active"><a href="#hr" > <h3>Human Resource</h3> </a></li>
+                    <li><a href="#inventory"> <h3>Inventory</h3> </a></li>
+                    <li><a href="#inventory"> <h3>Marketing</h3> </a></li>
+                    <li><a href="#inventory"> <h3>Manufacturing</h3> </a></li>
+                    <li><a href="#inventory"> <h3>Services</h3> </a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn"> <h3>Select Theme</h3> </button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="setDefaultTheme()">Default Theme</a>
+                                <a href="#" onclick="setDarkTheme()">Dark Theme</a>
+                                <a href="#" onclick="setLavenderTheme()">Lavender Theme</a>
+                                <a href="#" onclick="setRedTheme()">Red Velvet Theme</a>
+                                <a href="#" onclick="setBlackForestTheme()">Black Forest Theme</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="content">
+                <h1>Welcome</h1>
+
+                <section class="section-1">
+                    <div class="row-all-1">
+                        <!-- start row-->
+                        <div class="row">
+                            <div class="col-lg-12 col-lg-section-1">
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-1">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Create Sales Invoice</h2>
+                                            <img src="../icons/welcome-invoice.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-2">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Create Sales Order</h2>
+                                            <img src="../icons/welcome-sales-order.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <!-- end row-->
+                        <!-- start row-->
+                        <div class="row">
+                            <div class="col-lg-12 col-lg-section-1">
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-3">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Create Purchase Invoice</h2>
+                                            <img src="../icons/welcome-purchase-invoice.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-4">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Add New Product</h2>
+                                            <img src="../icons/welcome-product.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <!-- end row-->
+                        <!-- start row-->
+                        <div class="row">
+                            <div class="col-lg-12 col-lg-section-1">
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-5">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>See Profit & Loss Report</h2>
+                                            <img src="../icons/welcome-profit-loss.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-6">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Create Expense Transaction</h2>
+                                            <img src="../icons/welcome-Expense Transaction.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <!-- end row-->
+                        <!-- start row-->
+                        <div class="row">
+                            <div class="col-lg-12 col-lg-section-1">
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-1">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Update Profile Information</h2>
+                                            <img src="../icons/welcome-Profile Information.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <div class="card card-2">
+                                        <div class="card-header">
+                                        </div>
+                                        <div class="card-body">
+                                            <h2>Create New Outlet</h2>
+                                            <img src="../icons/welcome-New Outlet.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <!-- end row-->
+                    </div>
+                    <div class="row-all-2">
+                        <img class="default-image" src="../icons/welcome-animation1.png" alt="Default Theme">
+                        <img class="dark-image" src="../icons/moon-icon.png" alt="Dark Theme">
+                        <img class="lavender-image" src="../icons/lavender-icon.png" alt="Lavender Theme">
+                        <img class="red-velvet-image" src="../icons/red-velvet-icon.png" alt="Red Velvet Theme">
+                        <img class="black-forest-image" src="../icons/black-forest-icon.png" alt="Black Forest Theme">
+                    </div>
+                </section>
+
+    
+                <div class="insights">
+
+                </div>
+                <!-- end insight-->
+            </div>
+
+
+
+       </main>
+       
+       <!-- right section start-->
+    </div>
+
+
+</body>
+</html>

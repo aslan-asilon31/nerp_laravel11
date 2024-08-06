@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product</title>
+  <title>@yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -269,22 +269,168 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+
           <li class="nav-item">
-            <a href="./sales.html" class="nav-link text-white ">
+            <a href="./dashboard.html" class="nav-link text-white" id="dashboard-accounting">
               <i class="nav-icon fa fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Accounting Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('products.index') }}" class="nav-link text-white active" id="product-list">
-              <i class="nav-icon fa fa-user"></i>
+            <a href="./customers/customer.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-book"></i>
               <p>
-                Product List
+                Cash Book
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+              <li class="nav-item">
+                <a href="./customers/customer.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Cash Book List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./customers/customer.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Revenue
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+              <li class="nav-item">
+                <a href="./customers/customer.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Revenue List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Sales Revenue Reconciliation</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./customers/customer.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Expenses
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+              <li class="nav-item">
+                <a href="./customers/customer.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Expenses List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Cost List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Recurring Payment List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Partners List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./customers/customer.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Financial Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+              <li class="nav-item">
+                <a href="./customers/customer.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Journal Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Balance Sheet</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Income Statement</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>General Ledger Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Cash Flow Statement</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Payable Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../../categories.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Receivable Report</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./customers/customer.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Account List
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+              <li class="nav-item">
+                <a href="./customers/customer.html" class="nav-link text-white">
+                  <i class="far fa-star nav-icon"></i>
+                  <p>Account List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Sign Out
               </p>
             </a>
           </li>

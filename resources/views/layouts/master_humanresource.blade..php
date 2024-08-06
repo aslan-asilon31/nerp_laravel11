@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product</title>
+  <title>@yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -273,7 +273,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="./sales.html" class="nav-link text-white ">
+            <a href="dashboard-erp.html" class="nav-link text-white">
               <i class="nav-icon fa fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -281,10 +281,58 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('products.index') }}" class="nav-link text-white active" id="product-list">
-              <i class="nav-icon fa fa-user"></i>
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
               <p>
-                Product List
+                Departments
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Outlets
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Employee
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Attendances
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Leads Management
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Project Management
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link text-white">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Sign Out
               </p>
             </a>
           </li>

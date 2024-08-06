@@ -1,5 +1,7 @@
 @extends('../layouts/master_inventory')
 
+@section('title','Product Form')
+
 @section('content')
     <!-- Content Header (Page header) -->
     <section class="content-header">

@@ -1,18 +1,20 @@
 @extends('../layouts/master_inventory')
 
+@section('title','Product')
+
 @section('content')
 
     <section class="content-header">
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6">
-            <h1>Product List <i class="far fa-star"></i> </h1>
+            <h1>@yield('title') List <i class="far fa-star"></i> </h1>
           </div>
           <div class="col-sm-6 d-none d-sm-block">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Sales</a></li>
               <li class="breadcrumb-item"><a href="#">Product</a></li>
-              <li class="breadcrumb-item ">Product List</li>
+              <li class="breadcrumb-item ">@yield('title') List</li>
             </ol>
           </div>
         </div>

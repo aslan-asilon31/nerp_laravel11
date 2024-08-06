@@ -21,14 +21,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
-            TransactionSeeder::class,
-            StatusMasterSeeder::class,
-            SectionMasterSeeder::class,
-            ProductSeeder::class,
-            OrderSeeder::class,
-            DepartmentMasterSeeder::class,
-            // Add more seeders as needed
-        ]);
+        // $this->call([
+        //     TransactionSeeder::class,
+        //     StatusMasterSeeder::class,
+        //     SectionMasterSeeder::class,
+        //     ProductSeeder::class,
+        //     OrderSeeder::class,
+        //     DepartmentMasterSeeder::class,
+        //     // Add more seeders as needed
+        // ]);
+        \App\Models\Order::factory(10)->create();
+
     }
 }

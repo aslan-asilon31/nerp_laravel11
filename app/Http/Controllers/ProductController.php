@@ -12,6 +12,23 @@ use App\Models\MasterData\CategoryMaster;
 use App\Models\MasterData\CompanyMaster;
 use App\Traits\Outlet;
 use Illuminate\Support\Facades\DB;
+use app\models\MasterData\BrandMaster;
+use app\models\MasterData\ImageMaster;
+use app\models\MasterData\MasterBank;
+use app\models\MasterData\MasterLogHistory;
+use app\models\MasterData\MasterLogin;
+use app\models\MasterData\PriceMaster;
+use app\models\MasterData\RegionMaster;
+use app\models\MasterData\ReviewMaster;
+use app\models\MasterData\RoleMaster;
+use app\models\MasterData\StatusMaster;
+use app\models\MasterData\StockMaster;
+use app\models\MasterData\WebsiteMaster;
+use app\models\Blog;
+use app\models\Donation;
+use app\models\SocialAccount;
+use app\models\Transaction;
+use app\models\User;
 
 class ProductController extends Controller
 {

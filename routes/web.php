@@ -6,21 +6,17 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\OutletController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PaymentController;
-
-Route::post('donation/pay', [App\Http\Controllers\DonationController::class, 'pay'])->name('donation.pay');
+use App\Http\Controllers\OrderController;
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
- 
-Route::resource('/', WelcomeController::class);
-Route::resource('blogs', BlogController::class);
-// Route::resource('products', ProductController::class);
-// Route::get('get-categories', [ProductController::class,'getProductsByCategory'])->name('get.products.by.category');
-
-Route::put('/outlets/{outlet}', [OutletController::class, 'update'])->name('outlets.update');
-Route::get('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
-Route::post('/webhook/xendit', [PaymentController::class, 'webhook'])->name('webhook');
-
+// Route::get('/', function () {
+    //     return view('welcome');
+    // });
+    
+    Route::resource('blogs', BlogController::class);
+    Route::resource('/', WelcomeController::class);
+    Route::get('/product-filter', [App\Http\Controllers\WelcomeController::class, 'product_filter'])->name('welcome.product_filter');

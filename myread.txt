@@ -1,5 +1,8 @@
 
+===========run database
+php artisan backup:run
 
+=====================================
 
 php artisan serve --port=8111
 

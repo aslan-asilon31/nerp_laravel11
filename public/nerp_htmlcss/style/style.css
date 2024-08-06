@@ -1,0 +1,406 @@
+/* variables */
+
+
+/* default theme */
+:root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warning: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+  
+}
+  
+  /* dark theme */
+  .dark-theme-variables {
+    --clr-color-background: #181a1e;
+    --clr-white: #202528;
+    --clr-light: rgba(0, 0, 0, 0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light)
+}
+
+  /* red velvet theme */
+.red-theme-variables {
+    --clr-primary: red;
+    --clr-danger: #ff4c4c; /* Sedikit lebih cerah dari warna merah utama */
+    --clr-success: #41f1b6; /* Tetap sama seperti di tema ungu */
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1; /* Tetap sama seperti di tema ungu */
+    --clr-info-light: #dce1eb; /* Tetap sama seperti di tema ungu */
+    --clr-dark: #363949; /* Tetap sama seperti di tema ungu */
+    --clr-warning: #ff4c4c; /* Menyesuaikan dengan tema merah */
+    --clr-light: rgba(255, 182, 182, 0.18); /* Variasi terang dari merah */
+    --clr-primary-variant: #d32f2f; /* Variasi yang lebih gelap dari warna merah utama */
+    --clr-dark-variant: #b71c1c; /* Variasi lebih gelap dari merah */
+    --clr-color-background: #fce4ec; /* Warna latar belakang yang lembut dengan nuansa merah muda */
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+  /* * black forest cake theme */
+  .black-forest-theme-variables {
+    --clr-primary: #3e2723; /* Warna coklat gelap, mirip dengan krim coklat pada kue */
+    --clr-danger: #c62828; /* Merah marun, seperti buah ceri pada kue */
+    --clr-success: #4caf50; /* Hijau untuk kesuksesan, tetap sama */
+    --clr-white: #f5f5f5; /* Warna krim lembut, seperti krim kue */
+    --clr-info-dark: #6d4c41; /* Coklat tua untuk informasi gelap */
+    --clr-info-light: #bfaeae; /* Coklat muda untuk informasi ringan */
+    --clr-dark: #2c2c2c; /* Warna gelap untuk teks dan latar belakang */
+    --clr-warning: #d32f2f; /* Merah lebih cerah untuk peringatan */
+    --clr-light: rgba(255, 255, 255, 0.15); /* Warna terang dari krim, digunakan untuk bayangan */
+    --clr-primary-variant: #2c190e; /* Variasi gelap dari coklat utama */
+    --clr-dark-variant: #5d4037; /* Variasi coklat lebih gelap untuk efek kontras */
+    --clr-color-background: #e0e0e0; /* Warna latar belakang yang lembut, seperti lapisan kue */
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light); /* Bayangan untuk menambahkan efek kedalaman */
+  }
+
+  /* lavender theme */
+.lavender-theme-variables {
+    --clr-primary: #9b59b6; /* Lavender */
+    --clr-danger: #e57373; /* Lavender blush for a softer red */
+    --clr-success: #81c784; /* Soft green for success */
+    --clr-white: #fff;
+    --clr-info-dark: #6a1b9a; /* Darker purple for information */
+    --clr-info-light: #d1c4e9; /* Light lavender for informational elements */
+    --clr-dark: #3e1f47; /* Dark purple for text */
+    --clr-warning: #ffb74d; /* Soft orange for warnings */
+    --clr-light: rgba(158, 103, 199, 0.2); /* Light lavender tint */
+    --clr-primary-variant: #8e24aa; /* A darker lavender variant */
+    --clr-dark-variant: #4a148c; /* A deeper purple variant */
+    --clr-color-background: #f3e5f5; /* Very light lavender background */
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+  
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+  }
+body{
+    font-family: 'Comic Neue', cursive;
+    width: 100vw;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background:var(--clr-color-background) ;
+}
+.container{
+    display: grid;
+    width: 100%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 0rem;
+    margin: 0 auto;
+    /* font-display:grid; */
+}
+a{
+    color:var(--clr-dark);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--clr-info-dark);
+}
+
+p{
+    color:var(--clr-dark-variant);
+}
+b{
+    color: var(--clr-dark);
+}
+.primary{
+    color: var(--clr-primary);
+}
+.success{
+    color: var(--clr-success);
+}
+.danger{
+    color:var(--clr-danger)
+    
+}
+.warning{
+    color:var(--clr-warning)
+
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 1rem;
+}
+
+aside .top div.close{
+    display: none;
+}
+
+
+/******Sidebar*******/
+
+aside .sidebar{
+    background-color: var(--clr-white);
+    display: flex ;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top:1rem;
+}
+
+aside h3{
+    font-weight: 500;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items:center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+}
+
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    margin-left: 0;
+    border-left: 5px solid var(--clr-primary);
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+
+aside .sidebar a:hover{
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+aside .sidebar a span.msg_count{
+    background-color: var(--clr-danger);
+    color:var(--clr-white);
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+
+/* Start main section  */
+main{
+    margin-top: 1.4rem;
+}
+main .top-menu {
+    /* margin-top: 1.4rem; */
+    padding: 5px;
+    
+    background-color: var(--clr-white);
+}
+main .top-menu ul{
+    
+    display: flex;
+    padding-right: 5px;
+    justify-content: left;
+}
+
+main .top-menu ul li{
+    padding: 4px;
+}
+main .top-menu ul li a{
+    color: var(--clr-dark);
+}
+.top-menu ul li.active h3 {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    min-width: 160px; /* Width of the dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.dropdown-content a {
+    color: var(--clr-dark); /* Text color */
+    padding: 12px 16px; /* Padding inside each item */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links appear as blocks */
+    background-color: var(--clr-white);
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--clr-primary); 
+    color: var(--clr-white);
+}
+
+main .content{
+    margin-top: 1.2rem;
+    padding: 5px;
+
+}
+
+main .content .row{
+    /* background-color: var(--clr-white);  */
+    width: 100%;
+}
+main input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--clr-dark);
+}
+
+main .content .insights {
+
+    display: flex;
+
+}
+
+main .content .insights .sales{
+    background-color: var(--clr-white);
+    margin: 5px;
+    display: flex;
+}
+
+main .content .insights .expenses{
+    background-color: var(--clr-white);
+    margin: 5px;
+    display: flex;
+}
+
+main .content .insights .income{
+    background-color: var(--clr-white);
+    margin: 5px;
+    display: flex;
+}
+
+main .content .insights .recent_order{
+    background-color: var(--clr-white);
+    margin: 5px;
+    display: flex;
+}
+/* End start main section  */
