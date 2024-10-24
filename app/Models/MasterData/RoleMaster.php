@@ -9,7 +9,7 @@ class RoleMaster extends Model
 {
     use  HasFactory;
 
-    // protected $table = 'res_roles';
+    protected $table = 'res_roles';
     // protected $primaryKey = 'id';
 
     // protected $fillable = [
@@ -19,4 +19,9 @@ class RoleMaster extends Model
     //     'lang',
     //     'lang_id',
     // ];
+
+    public function divisions()
+    {
+        return $this->hasMany(RoleMaster::class, 'parent_id');
+    }
 }

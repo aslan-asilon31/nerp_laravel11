@@ -58,6 +58,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
+        // dd($order);
         $snapToken = $order->snap_token;
         if (empty($snapToken)) {
             // Jika snap token masih NULL, buat token snap dan simpan ke database
@@ -69,7 +70,7 @@ class OrderController extends Controller
             $order->save();
         }
  
-        return view('orders.show', compact('order', 'snapToken'));
+        return view('product_cart', compact('order', 'snapToken'));
     }
 
     /**

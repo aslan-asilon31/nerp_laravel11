@@ -10,4 +10,9 @@ class CompanyMaster extends Model
     use HasFactory;
     protected $table = 'res_companies';
     protected $primaryKey = 'id';
+
+    public function parent()
+    {
+        return $this->belongsTo(CompanyMaster::class, 'parent_id');
+    }
 }

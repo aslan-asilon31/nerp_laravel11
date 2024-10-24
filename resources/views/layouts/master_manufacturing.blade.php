@@ -78,30 +78,8 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../welcome/welcome.html" class="nav-link " id="module-employee">Welcome</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="./sales.html" class="nav-link " id="module-sales">Sales</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../marketing/marketing.html" class="nav-link " id="module-marketing">Marketing</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../human-resource/humanresource.html" class="nav-link " id="module-human-resource">HR</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../manufacturing/manufacturing.html" class="nav-link " id="module-manufacturing">Manufacturing</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="./inventory.html" class="nav-link active" id="module-inventory">Inventory</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="./accounting.html" class="nav-link " id="module-accounting">Accounting</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../services/services.html" class="nav-link " id="module-services">Services</a>
-      </li>
+      @include('layouts/module_list')
+      
     </ul>
 
 
@@ -231,9 +209,28 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar  elevation-4" style="background-color:indigo;color:white !important;font-weight:bolder;">
     <!-- Brand Logo -->
-    <a href="javascript::void(0)" class="brand-link" style="width:40px;height:60px;">
-      <img src="{{ asset('baker_htmlcss/img/logo.png') }}" alt="Nerp Logo" class="brand-image img-circle elevation-3 text-white" style="opacity: .8;width:60px;height:60px;">
-      <span class="brand-text font-weight-bold text-white">Baker</span>
+    <a href="javascript:void(0)" class="brand-link" style="margin-bottom:1px;text-align:center;">
+      @if($company_now->id == 1)
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:60%;height:60px;">
+      @elseif($company_now->id == 2)
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:100%;height:100px;">
+      @elseif($company_now->id == 3)
+          <p style="width:100%;height:10px;">Suktura V2</p>
+      @elseif($company_now->id == 4)
+          <p style="width:100%;height:10px;">Nebraska V2</p>
+      @elseif($company_now->id == 5)
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:80%;height:70px;">
+      @elseif($company_now->id == 6)
+          <p style="width:100%;height:10px;">Glowing</p>
+      @elseif($company_now->id == 7) 
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:90%;height:40px;">
+      @elseif($company_now->id == 8) 
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:90%;height:40px;">
+      @elseif($company_now->id == 9) 
+          <img src="{{ Storage::url('public/website-logo/').$company_now->image }}" style="width:90%;height:40px;">
+      @else
+          -
+      @endif
     </a>
 
     <!-- Sidebar -->

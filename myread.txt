@@ -1,3 +1,18 @@
+=================================
+
+
+susunanan akuntansi by mekari :
+1. account / Account / akun
+2. general_journal / general-journal /  / GeneralJournal / jurnal umum
+3. general_ledger / general-ledger / GeneralLedger  / buku besar
+4. trial_balance / trial-balance / TrialBalance / neraca saldo
+5. adjustment_entries/ adjustment-entries / AdjustmentEntries / jurnal penyesuaian
+6. trial_balance_after_adjustment_entries /trial-balance-after-adjustment-entries / TrialBalanceAfterAdjustmentEntries / neraca saldo setelah jurnal penyesuaian
+7. financial_report / financial-report / FinancialReport / laporan keuangan
+8. closing_entries / closing-entries /ClosingEntries / jurnal penutupan
+9. trial_balance_after_closing_entries / trial-balance-after-closing-entries / TrialBalanceAfterClosingEntry / neraca saldo setelah jurnal penutupan
+
+
 
 ===========run database
 php artisan backup:run
